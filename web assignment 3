@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic Wood Cretions - ECommerce Portal</title>
+  <style>
+    /* ====== GLOBAL STYLES ====== */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+ 
+    body { background: #98FB98; color: #98Fb98A; }
+    header {
+      background: rgb(160, 9, 179);
+      color: # f;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    header h1 { font-size: 26px; letter-spacing: 1px; }
+    nav ul {
+      display:flex;
+      list-style: none;
+      gap: 20px;
+    }
+    nav a {
+      color: white;
+       text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover { color: yellow }
+    section { padding: 40px; display: none; }
+    section.active { display: block; }
+    /* ====== HOME SECTION ====== */
+    #home {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, violet, rgb(129, 8, 129));
+      color: white;
+    }
+    #home h2 { font-size: 40px; margin-bottom: 15px; }
+    #home p { font-size: 18px; }
+    /* ====== PRODUCTS ====== */
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-t, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .product h3 { margin: 10px 0; }
+    .product button {
+      background: rgb(172, 5, 172);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .product button:hover { background: rgb(160, 2, 160); }
+    /* ====== FORMS ====== */
+    form {
+      max-width: 400px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    form h3 { margin-bottom: 15px; text-align: center; }
+    form input, form textarea {
+      width: 100%;
+      margin: 8px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: rgb(158, 2, 158);
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    form button:hover { background: rgb(117, 4, 117); }
+    /* ====== FOOTER ====== */
+    footer {
+      background: #222;
+      color: #bbb;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+ </head>
+ <body>
+  <!-- ===== HEADER & NAVIGATION ===== -->
+  <header>
+    <h1>Classic Wood Creations</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('products')">Products</a></li>
+        <li><a href="#" onclick="showSection('orders')">Orders</a></li>
+        <li><a href="#" onclick="showSection('wishlist')">Wishlist</a></li>
+        <li><a href="#" onclick="showSection('reviews')">Reviews</a></li>
+        <li><a href="#" onclick="showSection('login')">Login</a></li>
+        <li><a href="#" onclick="showSection('register')">Register</a></li>
+        <li><a href="#" onclick="showSection('contact')">Contact Us</a></li>
+        <li><a href="#" onclick="showSection('about')">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- ===== HOME ===== -->
+  <section id="home" class="active">
+    <h2>Classic Wood Creations</h2>
+    <p>Your one-stop destination for all shopping needs. Discover amazing products
+  at unbeatable prices! .Timeless furniture crafted with elegance,tradion,and enduring quality.</p>
+  </section>
+<!-- ===== PRODUCTS ===== -->
+ <section id="products">
+ <h2>Our Products</h2><br>
+ <div class="product-container">
+ <div class="product">
+ <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2w
+ CEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx
+ 8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3N
+ zc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQA0
+ QMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAwUBBAYHAv/E
+ ADoQAAIBAwIDBQYEBQMFAAAAAAABAgMEEQUhEjFRBhNBYXEHIjKBkaEUI1L
+ wQmKxweEW0fEVcoKSov/EABcBAQEBAQAAAAAAAAAAAAAAAAABAgP/xAA
+ eEQEBAQACAwADAAAAAAAAAAAAARECITEyQQMSIv/aAAwDAQACEQMRAD
+ 8A9xAAA+XJR5tI+ip1OcoVnnZJbeZKLRTjLlJM+jmJXk1lpyylnnyJrfVK0Us4l5Mn7
+ LjoQV9vqdKolxJp+RtK6pNfFgupiYEDu6K5yIpX9NLk8jRuAr3qUc4USe2vKdeTitpc
+ 8DRsgAoAAAAAAAAAAAAAAAAAAAAABWazS4owqJctmWZr3tLvbepHm8be
+ pKRylWXDPCwubzheJmL2eNn+pNL7mbxPg4o8UpRfLfmyCFTKy20kvFYOTbdh
+ PG3F9yZVsLmumWzSjKOF+YnjzTXrnH9T5dRpZUue2f8AYo34zb5YMNp8lv0NOF
+ WSkmnldOpMppvnheOzCPvzRJa13RuITXVJ7eDIU8v4s+R81PgeHz6Fg6xcjJDZ1O
+ 9taNTOeKCf2JjoyAAAAAAAAAAAAAAAAAAAAAAAA5vVaEYXFROOVJbbFDUk
+ 4TUZ4WHz /oddrdHioqql8Oz9DlrynGNTjgn72MtJZZzvlqDqSpptyxnkh3rcnFZT9
+ c/wCeprSkopcCaUnu44Wfp4EUakcZwm0uSjkyqxjLmo/F6Z3NiE1HOdl58iqhWSj
+ mTwvBNf8ABuUazz7v1Wy+39QN9NNdfLJl4mnnJDTlssfLDJo9PHpkqLvRJuWnw
+ UucXKP3LAqdHnwTqU87S95epbHSMgMZXUcUf1L6lGQYUovk0ZAAAAAAAAA
+ AAAAAAAAAACOtSjWpSpy5SWDllZyrSlRmvei8PwwzrSo1NdxXjVjH4+fqjNixTf6d
+ cm+O5ik+kW35H1Hs/ZRf5lepL/t902Kl023gj76T5y tv35GV7SQ0nTIppQkvPvHk0
+ 7rS4QbdpVbxu6csP6E8qrcdseT6mrCtUU95b81h8+iIqCjUxz2S5b8vL99Ddpz8tvnj
+ 7mtcZku/jLfHv7r646CnJN9XjOyILezqcMs53S2ec4Nr8ROX8T+pWW0lH6dTaUiy
+ mNnvZdTDqN8yFS6mJzSRdTH1UuOBbPD9Sw0u6jeWzknlwlwP1wjnr6fFCSXFnG
+ xP2Onj8bSzn31Nb/AC/sJeyx04AOjIAAAAAAAAAAAAAAAAa2o0e+tKkUveSyvU
+ 2TDJRxs9tn82z44k1u3l8s9Dd1W37i7ltiE/ej5Z5mg1vvj1yc24lcuJOPw7bdWa9eUlJ
+ rKiseDWfufaaT/T6EMo8csQzlbZzvzAUpyjVy4w97Z+L/AHs/oMcFw4xy094vGcox
+ TTctk8JpYT5l5p1R0aWMtJ74JmjWtYVZJPgqf+puKlUa+Bk7uVhPPpkO6j+pfU1iajj
+ RnjeOPVmHaVJPeokvLc+pXkIxzlfUgqX0YtpOSlnGEhkEysaKWJylL54PizoWunX0q
+ 1Lijxx4Zx4srHXcqrrV4wykllddzRqanOo3h4xzGwsehRaaTTymZKzs9XdxpNCo/wC
+ ZLPRNpFmdGQAAAAAAAAAAAAAAAAAAV2s23fWveJe/S95enicy+W7O2ays
+M5/UdEnCVSta1YRp4cnCouXXcxyjUqoTezim+uWRVJJbdN2+aZpaXqlPVrerV06N
+ SvTpPhm6dOT4Jc8cueMGbi47vLqxlB4eVJYf3MK
+ 2aVSMX+lLO6Jad9w0oR4lw8Kb2wUsrtYzFpbr3seXiatS5apUsyl8GG+Lpt4cyauOl
+ d+5KSpTjN+MZ4z9eX3NWtqrg2p8UX14c4+xzf45tKMPDksZWfDb97klCWoVtqd
+ vc1HJ/wAMG9/LA2mLepqbk9pNtLG0XsvoalS74tpRlLHLZJEtp2d126cY/g50l4zry
+ UYr5c/sX1h2Hw+K/vW1+iisfdly06jlO9aSjGKy+v8AjYvNH7PXmpTjUuYzoWvi57OX
+ pH+7KnsXXr6b7S9U0HVIxmsS/BTlBe6k+KOHzbcHv5xPWcFnBLyRW9vTtqMKN
+ GKjCCxFLoTAHVgAAAAAAAAAAAAAAAAAAA5b2kao9K7KXcqb/Orx7mGOe/P
+ HyydQzgO0cf8AUXbzTtGXvW1glc3Xyw1H5vhXzZjnesWLzsBon/Qey1razWLipmvc
+ PrUlu/osL5HRSpwmsTipeqyZXIyaxELt6DjwujTw/DhR5B2lpztPapZ0U2rKvcUXKh/
+ A09nt6nsjPK/aHT7vtxpNfHOdF59JmefUa4vTaVla0UlStqUEuXDBInSS5LAMmsjL
+ GEMGQUeWe1ahLRO0mhdrKCwqdVULiSXgstZ+XGj0+jUjVpQqQeYzipJroyj7d6N
+ HXuy1/YcOakqfeUX0qR96P3WDR9l2qy1PsbZd6339tm2qJvfMNln/AMcGfq/HXA
+ A0gAAAAAAAAAAAAAAAAAAIbuvC2tqleq8QpwcpPyRyXs6tZ3FC+1+4TVbUq
+ 8nDPhSi2l9Xl+mC57Xafe6totSw06rSpTryjGpKpJr8vPvYaT3wWdjbUrOzo2tvFQpU
+ YKEIrwSWEZz+l+JlyMgGkDzP2qR7vWNHrLlxRWfSaPTDzv2wxUbTTa/Lgqy39M
+ Mx+T1Xj5ehx3SfUyR0HxUKb6xX9CQ2gAAMHnnZOL7P+0TXNCfu219FX1ovD+Z
+ fJt/JHohSar2cpahr2lawq86Nxp0p44EvzIyjhxfkSwXYAKAAAAAAAAAAAAAAAA
+ AAAw1kJYMgAAABwnthpuXZmnUUc8F 04Zf7I7s5L2o0e+7IXH8k4S++P7mefr
+ Vnl0unS47C2l+qlF/Y2Cu7O1O+0DTav67Wm//lFiWIAAoAAAAAAAAAAAAAAAA
+ AAAAAAAAAAAAABo6zpltrFhWsL6M5UKySmoTcHzzs1uuQBKJrC0o6fY29nbJx
+ oW9ONOmnJtqKWFu+ZsACAACgAAAAAAAAAAAAAAAD//2Q==" alt="Chair">
+ <h3>Stylish Chair</h3>
+ <p>₹1999</p>
+ <button>Add to Cart</button>
+ </div>
+ <div class="product">
+ <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2w
+ CEAAkGBxISEhUSEhIVFRUVFhAVFRcWEhcVFRUXFRUWFhUVFRUYHSggGBolGx
+ UVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGyslHR03Ky0tKy0rLy0tKy0
+ tLSstLS0tLSstLS0tLS0tLS0rLS0tLS0tLS0tLS0tLS0rLS0rLf/AABEIAOEA4QMBIg
+ ACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABQYBAgQDB//EAD8QA
+ AIBAgEGDAUCBAYDAAAAAAABAgMRBQQSITFxsQYiMjNBUWFygZGhwSOCst
+ HwQuETJGJzQ1JjkqLCFTTx/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAECBQQ
+ D/8QAJBEBAAIBAwQDAQEBAAAAAAAAAAECAwQxMhETM0ESIVFhIxT/2gAM
+AwEAAhEDEQA/APuIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+ AAMC4AC4uAAFwAFxcABcXAAXFwAFxcABcXAAXFwAFxcABcXAAXAAC4AA
+ XAAGQABgHjleVQpRz5yUYq2l6Fduy9WjweJw6E3sS+5WbRG6YrM7O0EdLFF0R
+ 82ecsTl1L1InJVbt2/EqCGliE+teR5Syuo/wBT3bivdhaMNk8aymlraXiQEqknrbe1s87E
+ d5bs/wBT8srgv1LzPKWI0+u/gyHSM5i6ys5pT2YScsUj1S9Dzni3VD/l+xw5q/LjNR
+ Xu2W7VXTLE59CS8zzliFR6n6I87GSO5b9T8K/g8oqPXKXnY82pPW29rubi5X5Sn
+ 4sQzlqk1sOmnltRa3favc5xmkxaYJrEpGGJrpXk7nRTyuD1SXjo3kMatdvoXjLKk4YW
+ JMEBTk46pNeJ0QxCa12e09IzR7ec4Z9JcHBDE49Ka2aTpp5VB6pLdvLxaJUmsxu
+ 9gAWVAABkAAcuIZDCtTlTqK8ZWurtandO67Uiq5dwdq5NGVShXeZFO PToSu7
+ aLN+C2lzOTF1ehV/t1PpZ5ZcdbR1n09Md7VnpClZNwjj/iR+aOleMda9SYyXKqdRX
+ pyUtmtbVrRSssyZN6NGj3Z4wc4Wa6Op2a8UZdc8+2jOOPT6GosZr7Cq5BwhqJp
+ Sakv69D8Jfcn8nxWlLQ24vt1f7tR71y1l5zSYdeb2mc03Vnp9w0i/VRpZCxvnC/YBp
+ ZixvZ9RnMfWOo8/wA1C209P4faMxAedl+MypG+j8Qb7ANLsWZvp7DW3b6AYz
+ Bmmc3aYzV1eYGOKFbq9DLklraXpvPKeVQWuS37iPlEJ6PW3YYs+w5J4jDou/A8K
+ 2LxjrSXbKSSK92n6nt2ScJyWqbWz7HTTy+S16dqtuKpX4SQX+JTWy8t1zhq8J09U
+ pvupRQ/6em3UnB13fQIYiulNep1UK0Zq8WnZ2fY+ormGYMq9KFWdSXHjGWb1X
+ V7XZO4dkMaMc2F7Ntu703f/wAR14rZJ5R9OTJFI4z9usAHu8mDlxXmavcn9LOo5
+ cU5mr/bn9LK34ymu8Pm+W0ndSWlW9U2eMZde5EqlxV472WzIsOpVcnpxqQUl
+ mJdq2PWjHxYO7MxEtTJl7cR1h8+dKL6FuZiNOUeTe3VrXl0FrxHgi9Loy+WXtJFey
+ nI6tJ2nFxfbqex9PgVvivj5QtTJS+0vCniVSm7rOj120xerXF/uTmRcI4vlxv2x6NsXqIN
+ 1OtHnKjF6VofkykZJjZaaRO67ZHidKrzck9NramnsZ152zzPnDoyjq0q9+p+ZKZHj8o
+ Wjdq3RPT/AMj3rn/XlOL8XPO7fQxbbuIyOK3ims3T05ySXmc2UY7GKu6lNbLy3XL
+ 96qvblOZvZ6jyKnX4U01+ucu7C29o4qvCW/JpTl3p29LPeR3v4ntrtKrFa5LzPGeW
+ 0103KP8A+Xry5MIR8G/29DV1sqlrnZdiUdyKTmlaMULq8Sj0Rb8Dlr43GOtxXekvu
+ VCWQzly6kpeLe82p4WvzTuKTlt+rxjj8TtXhNH
+ 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
+ wCxlafyw0c3jlLmLmGzFzV
+ ZzY8akD1TMtAcTibwPeUDTMIS3izdHnFHoiUDPOSPUw0Bz3GcbTic8pEJc2OP4X
+ zR9yrVL9BZMYlel4r3K7fT6bzM1nkaGl4LdkL+FDuQ3I96b0o4sjqfDh3Y7kdVB6Vt
+ NKnGHBbeXcACyrDPKrSUk01od0eoAgpcHouV3N202VlfT1slcnyVQioroVjoB50xU
+ pPWsL2yWt9TLVI2APRQMXBo2Btc1qPQ9j3GtzFR8V7HuInZMKvQ5K2fcl8B/X8v
+ uRFB8VEvgj5fy+5l6fzQ0M3jlKNmLmAarPbo2R5I9IhDYxYyAMJGQAAAAw0clem
+ dhrJAVzF5PNt2r3IR6/Fe6LHjlC0b9qK5UXtv/czNX5GjpeCfyGXFiuxbiWyWBwYVk
+ /Fi+xExGJo04w4Lby3ABZVgAAAAAAAGDzkejPOcQNM41rS4su7LcYmzxrS4stkt
+ xWdlo3V+nyUS2CvRLbH3ImnyV4klhU7KW1GZp/NDvz+NMXMnjCR7xNRnspG6
+ CRklAAAAAAAAAAAPOtSUlaSTXaRqwGje/Gt1Z2he/qSwK2pW28LVvau0tKdNRS
+ S0JaFsN0AWVZAAGAAAAAAAADDRkAeFWmcOV6Iy2PcSjRzZbk+dFpa7O3kRb
+ ZMbqxB8ReO87MO1Pac0oNRSehrWmiSwfJW029Gnq1mZp4nvO/PMdt25LE7Yo
+ xTp2NzUZ4AAAAAAAAAAAAAAAAAAMgADAAAAAAAAAAAGLGQBo6Sveyv1
+ 2VzaxkDoAAAAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAAAAAAAAA
+ AAAAAAAAAAAAAAAAAAAA//Z" alt="Table">
+        <h3>Wooden Table</h3>
+        <p>₹4,999</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1584622650111993a426fbf0a
+ ?auto=format&t=crop&w=400&q=60" alt="Lamp">
+        <h3>Decorative Lamp</h3>
+        <p>₹1,299</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+  <!-- ===== ORDERS ===== -->
+  <section id="orders">
+    <h2>Your Orders</h2>
+    <p>No recent orders found.</p>
+  </section>
+  <!-- ===== WISHLIST ===== -->
+  <section id="wishlist">
+    <h2>Your Wishlist</h2>
+    <p>You haven't added anything yet!</p>
+  </section>
+  <!-- ===== REVIEWS ===== -->
+  <section id="reviews">
+    <h2>Customer Reviews</h2>
+    <p>"Amazing quality and fast delivery!" - <b>Priya dharshika</b></p>
+    <p>"User-friendly website and great deals." - <b>Ragul</b></p>
+  </section>
+  <!-- ===== LOGIN FORM ===== -->
+  <section id="login">
+    <form onsubmit="return validateLogin()">
+      <h3>Login</h3>
+      <input type="text" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" required 
+minlength="6">
+      <button type="submit">Login</button>
+    </form>
+  </section>
+  <!-- ===== REGISTER FORM ===== -->
+  <section id="register">
+    <form onsubmit="return validateRegister()">
+      <h3>Register</h3>
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required minle
+ ngth="6">
+      <input type="password" id="confirmPassword" placeholder="Con rm Password
+ " required>
+      <button type="submit">Register</button>
+    </form>
+  </section>
+  <!-- ===== CONTACT US ===== -->
+  <section id="contact">
+    <form>
+      <h3>Contact Customer Care</h3>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button>Send Message</button>
+    </form>
+  </section>
+  <!-- ===== ABOUT US ===== -->
+  <section id="about">
+    <h2>About Classic Wood Creations</h2>
+    <p>Classic Wood Creations is your trusted online shopping destination, ordering top
+quality products and exceptional customer service.</p>
+  </section>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 Classic Wood Creations. All Rights Reserved.</p>
+  </footer>
+  <!-- ===== SCRIPT ===== -->
+  <script>
+    // Navigation switching
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("ac
+ tive"));
+      document.getElementById(id).classList.add("active");
+      window.scrollTo(0, 0);
+    }
+    // Login validation
+    function validateLogin() {
+      const email = document.getElementById('loginEmail').value;
+      const pass = document.getElementById('loginPassword').value;
+      if (!email.includes("@")) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+      if (pass.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+      alert("Login Successful!");
+      return false;
+    }
+    // Registration validation
+    function validateRegister() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value;
+      const pass = document.getElementById('password').value;
+      const confirm = document.getElementById('confirmPassword').value;
+      if (name === "") {
+        alert("Please enter your name.");
+        return false;
+      }
+      if (!email.includes("@")) {
+        alert("Enter a valid email address.");
+        return false;
+      }
+      if (pass.length < 6) {
+        alert("Password must be at least 6 characters.");
+        return false;
+      }
+      if (pass !== confirm) {
+        alert("Passwords do not match.");
+        return false;
+      }
+      alert("Registration Successful!");
+      return false;
+    }
+  </script>
+ </body>
+ </html>

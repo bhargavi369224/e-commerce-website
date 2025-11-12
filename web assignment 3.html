@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic Wood Cretions - ECommerce Portal</title>
+  <style>
+    /* ====== GLOBAL STYLES ====== */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+ 
+    body { background:#f4f4f4; color:#333; }
+    header {
+      background: rgb(179, 9, 179);
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    header h1 { font-size: 26px; letter-spacing: 1px; }
+    nav ul {
+      display:flex;
+      list-style: none;
+      gap: 20px;
+    }
+    nav a {
+      color: white;
+       text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover { color: yellow }
+    section { padding: 40px; display: none; }
+    section.active { display: block; }
+    /* ====== HOME SECTION ====== */
+    #home {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, violet, rgb(129, 8, 129));
+      color: white;
+    }
+    #home h2 { font-size: 40px; margin-bottom: 15px; }
+    #home p { font-size: 18px; }
+    /* ====== PRODUCTS ====== */
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-t, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .product img {
+      width: 80%;
+      height:100;
+      border-radius: 10px;
+    }
+    .product h3 { margin: 10px 0; }
+    .product button {
+      background: rgb(172, 5, 172);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .product button:hover { background: rgb(160, 2, 160); }
+    /* ====== FORMS ====== */
+    form {
+      max-width: 400px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    form h3 { margin-bottom: 15px; text-align: center; }
+    form input, form textarea {
+      width: 100%;
+      margin: 8px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: rgb(158, 2, 158);
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    form button:hover { background: rgb(117, 4, 117); }
+    /* ====== FOOTER ====== */
+    footer {
+      background: #222;
+      color: #bbb;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+ </head>
+ <body>
+  <!-- ===== HEADER & NAVIGATION ===== -->
+  <header>
+    <h1>Classic Wood Creations</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('products')">Products</a></li>
+        <li><a href="#" onclick="showSection('orders')">Orders</a></li>
+        <li><a href="#" onclick="showSection('wishlist')">Wishlist</a></li>
+        <li><a href="#" onclick="showSection('reviews')">Reviews</a></li>
+        <li><a href="#" onclick="showSection('login')">Login</a></li>
+        <li><a href="#" onclick="showSection('register')">Register</a></li>
+        <li><a href="#" onclick="showSection('contact')">Contact Us</a></li>
+        <li><a href="#" onclick="showSection('about')">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- ===== HOME ===== -->
+  <section id="home" class="active">
+    <h2>Classic Wood Creations</h2>
+    <p>Your one-stop destination for all shopping needs. Discover amazing products
+  at unbeatable prices! .Timeless furniture crafted with elegance,tradion,and enduring quality.</p>
+  </section>
+<!-- ===== PRODUCTS ===== -->
+ <section id="products">
+ <h2>Our Products</h2><br>
+ <div class="product-container">
+ 
+ <div class="product">
+ <img src="https://images-cdn.ubuy.co.in/65853a22338b312f2105bad9-uixe-accent-chair-modern-living-room.jpg" alt="stylish chair" width="20" height="400">
+ <h3>Stylish Chair</h3>
+ <p>₹4,999</p>
+ <button>Add to cart</button>
+ </div>
+ <div class="product">
+    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRalTHvHSn01ySwrTKHZe9A38EvaixwzC8sbvd-UPOE3WjZh7Idu2IDE0AEtcLNvFKtFMVuDtCON0kB7f70YTkitpPjFq8Xoi_YC8xbKKEN6AzOvimVnnzOtQ"alt="Wooden table" width="20" height="400">
+    <h3>Wooden Table</h3>   
+    <p>₹14,999</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLs80mDND8dh4SIAe0IrflSftPBZ_1cPDXFg&s"alt="Decorative Lamp" width="20" height="400">
+        <h3>Decorative Lamp</h3>
+        <p>₹10,999</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61b1wcMRn-L._AC_UF894,1000_QL80_.jpg"alt="Wooden bed" width="5" heigth="80">
+        <h3>Classic Wooden Bed</h3>
+        <p>₹14,999</p>
+        <button>Add  to Cart</button> 
+      </div>
+    </div>
+  </section>
+  <!-- ===== ORDERS ===== -->
+  <section id="orders">
+    <h2>Your Orders</h2>
+    <p>No recent orders found.</p>
+  </section>
+  <!-- ===== WISHLIST ===== -->
+  <section id="wishlist">
+    <h2>Your Wishlist</h2>
+    <p>You haven't added anything yet!</p>
+  </section>
+  <!-- ===== REVIEWS ===== -->
+  <section id="reviews">
+    <h2>Customer Reviews</h2>
+    <p>"Amazing quality and fast delivery!" - <b>Priya dharshika</b></p>
+    <p>"User-friendly website and great deals." - <b>Ragul</b></p>
+  </section>
+  <!-- ===== LOGIN FORM ===== -->
+  <section id="login">
+    <form onsubmit="return validateLogin()">
+      <h3>Login</h3>
+      <input type="text" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" required 
+minlength="6">
+      <button type="submit">Login</button>
+    </form>
+  </section>
+  <!-- ===== REGISTER FORM ===== -->
+  <section id="register">
+    <form onsubmit="return validateRegister()">
+      <h3>Register</h3>
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required minle
+ ngth="6">
+      <input type="password" id="confirmPassword" placeholder="Confirm Password
+ " required>
+      <button type="submit">Register</button>
+    </form>
+  </section>
+  <!-- ===== CONTACT US ===== -->
+  <section id="contact">
+    <form>
+      <h3>Contact Customer Care</h3>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button>Send Message</button>
+    </form>
+  </section>
+  <!-- ===== ABOUT US ===== -->
+  <section id="about">
+    <h2>About Classic Wood Creations</h2>
+    <p>Classic Wood Creations is your trusted online shopping destination, ordering top
+quality products and exceptional customer service.</p>
+  </section>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 Classic Wood Creations. All Rights Reserved.</p>
+  </footer>
+  <!-- ===== SCRIPT ===== -->
+  <script>
+    // Navigation switching
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+      window.scrollTo(0, 0);
+    }
+    // Login validation
+    function validateLogin() {
+      const email = document.getElementById('loginEmail').value;
+      const pass = document.getElementById('loginPassword').value;
+      if (!email.includes("@")) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+      if (pass.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+      alert("Login Successful!");
+      return false;
+    }
+    // Registration validation
+    function validateRegister() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value;
+      const pass = document.getElementById('password').value;
+      const confirm = document.getElementById('confirmPassword').value;
+      if (name === "") {
+        alert("Please enter your name.");
+        return false;
+      }
+      if (!email.includes("@")) {
+        alert("Enter a valid email address.");
+        return false;
+      }
+      if (pass.length < 6) {
+        alert("Password must be at least 6 characters.");
+        return false;
+      }
+      if (pass !== confirm) {
+        alert("Passwords do not match.");
+        return false;
+      }
+      alert("Registration Successful!");
+      return false;
+    }
+  </script>
+ </body>
+ </html>
